@@ -16,4 +16,4 @@ const getonair = () =>
     "on_the_air?api_key=6210c279cdb193474eab3c90fade739b&language=en-US&page=1"
   );
 
-export default { getmovies, getupcoming, getonair };
+export { getmovies, getupcoming, getonair };
