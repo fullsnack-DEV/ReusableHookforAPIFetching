@@ -4,7 +4,7 @@
   place-items: center;
 }
 
-.Cinema .seats {
+.seats {
   display: grid;
   grid-gap: 6px;
   grid-template-columns: repeat(8, min-content);
@@ -12,18 +12,13 @@
 }
 
 .Cinema .seats .seat:nth-of-type(8n + 2) {
-  margin-right: 12px;
+  margin-right: 25px;
 }
 .Cinema .seats .seat:nth-of-type(8n + 6) {
-  margin-right: 12px;
+  margin-right: 25px;
 }
-.Cinema .seats .seat:not(.occupied):hover,
-.Cinema .seats .seat:not(.occupied):focus {
-  cursor: pointer;
-  background: #c1eac5;
-  transform: scale(1.2);
-}
-.Cinema .seats .seat.selected::after {
+
+/* .Cinema .seats .seat.selected::after,::before {
   content: "";
   position: absolute;
   top: 0;
@@ -33,22 +28,11 @@
   border-radius: 100%;
   background: transparent;
   border: 1px solid #7bc47f;
-  animation: show-off 0.8s;
-  visibility: hidden;
-}
-@keyframes show-off {
-  0% {
-    transform: scale(1);
-    opacity: 1;
-    visibility: visible;
-  }
 
-  100% {
-    transform: scale(3);
-    opacity: 0;
-  }
-}
-.seat {
+  visibility: hidden;
+} */
+
+/* .seat {
   display: inline-block;
   background: #626262;
   width: 16px;
@@ -59,9 +43,15 @@
 
   position: relative;
   top: 1px;
-}
+} */
 .seat.selected {
-  background: yellow !important;
+  background: linear-gradient(#fff 80%, #fff, 0, #cc1f2f 100%);
+}
+.seat.selected::after {
+  background: #626262 !important;
+}
+.seat.selected::before {
+  background: #626262 !important;
 }
 .screen {
   height: 100px;
@@ -72,4 +62,33 @@
 
   transform: rotateX(-50deg) scale(1.1);
   box-shadow: 0 3px 10px 2px;
+}
+
+.seat {
+  width: 35px;
+  height: 40px;
+  background: #cc1f2f;
+  border-radius: 4px 4px 8px 8px;
+  position: relative;
+  border: 1px solid #fff;
+  margin: 5px;
+  background: linear-gradient(#cc1f2f 70%, #000 8%, #cc1f2f 77%);
+  display: inline-block;
+}
+.seat::after,
+.seat::before {
+  content: "";
+  display: block;
+  width: calc(44px / 6);
+  height: calc(44px / 2);
+  position: absolute;
+  background: #cc1f2f;
+  border-radius: 4px;
+  border: 1px solid #000;
+}
+.seat::before {
+  right: 30px;
+}
+.seat::after {
+  left: 30px;
 }

@@ -32,18 +32,54 @@ h1 {
 .nums {
   font-size: 12rem;
   position: absolute;
-  letter-spacing: -2rem;
+  letter-spacing: -1rem;
   bottom: 25px;
   top: 5%;
   font-weight: bold;
   left: 10px;
-  -webkit-text-stroke: 0.5vmin hsl(0, 0%, 100%);
+  -webkit-text-stroke: 0.8vmin hsl(0, 0%, 100%);
   text-shadow: 1vmin 0 4vmin #000;
-  transform: translate(-14%, 0);
+  transform: translate(-18%, 0);
 }
 /* 
 Booking screen */
 
 h4 {
   margin-left: 10px;
+}
+
+/* Carousel */
+
+.Container-car {
+  display: flex;
+  max-width: 60vw;
+  margin: 0 auto;
+  gap: 3%;
+  justify-content: center;
+
+  height: 60vh;
+}
+
+.right:nth-of-type(1) {
+  margin-top: 0rem;
+}
+
+.right:nth-of-type(2) {
+  margin-top: 1rem;
+}
+.right:nth-of-type(3) {
+  margin-top: 2rem;
+}
+.right:nth-of-type(5) {
+  margin-top: 1rem;
+}
+.right:nth-of-type(6) {
+  margin-top: 2rem;
+}
+.right:nth-of-type(7) {
+  margin-top: 2rem;
+}
+
+.Container-car .img:hover {
+  opacity: 1;
 }

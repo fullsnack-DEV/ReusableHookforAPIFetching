@@ -9,8 +9,8 @@ const Moviecomp = ({ endpoint, title, top }) => {
 
   useEffect(() => {
     loadmovies();
-    console.log("Renderd");
   }, []);
+
   //getting poster path
   const getposter = (path) =>
     `https://image.tmdb.org/t/p/w440_and_h660_face${path}`;
